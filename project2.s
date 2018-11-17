@@ -93,3 +93,9 @@
 
 	convertString:
 	lb $s4, 0($a0)
+	beqz $s4, displaySum
+	beq $s4, $t1, displaySum
+	slti $t6, $s4, 58
+	bne $t6, $zero, zeroToNine
+	slti $t6, $s4, 89
+	
