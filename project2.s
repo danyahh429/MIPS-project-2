@@ -43,3 +43,8 @@
 
 	nullError:
 	li $v0, 4
+	la $a0, nullErrorMessage
+	syscall
+	j exit
+	
+	lengthError:
