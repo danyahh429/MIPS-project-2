@@ -3,4 +3,8 @@
     lengthErrorMessage: .asciiz "Input is too long."
     baseErrorMessage:   .asciiz "Invalid base-34 number."
     userInput:		.space 50
-  
+ .text
+    main:
+	li $v0, 8       #get user input as txt 
+	la $a0, userInput
+	li $a1, 50
