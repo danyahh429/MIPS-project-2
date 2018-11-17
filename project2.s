@@ -33,3 +33,8 @@
 	addi $a0, $a0, 1   #Increment the string ptr
 	addi $t0, $t0, 1
 	j lengthLoop
+
+	done:
+	beqz $t0, nullError   #Branch to null error if length is 0 or null
+	slti $t3, $t0, 5      #Check that count is less than 5
+	beqz $t3, lengthError #Branch to length error if length is 5 or more
