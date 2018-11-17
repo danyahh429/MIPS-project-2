@@ -63,3 +63,8 @@
 	bne $t6, $zero, Increment
 	slti $t6, $t5, 65    #Check if the char is less than 65->A (Invalid input)
 	bne $t6, $zero, baseError
+	slti $t6, $t5, 89    #Check if the char is less than 89->Y(Valid input)
+	bne $t6, $zero, Increment
+	slti $t6, $t5, 97    #Check if the char is less than 97->a(Invalid input)
+	bne $t6, $zero, baseError
+	slti $t6, $t5, 121   #Check if the char is less than 121->y(Valid input)
