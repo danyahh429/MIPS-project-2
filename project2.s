@@ -88,3 +88,8 @@
 	addi $s0, $s0, -1	
 	li $s3, 3
 	li $s2, 2
+		li $s1, 1
+	li $s5, 0
+
+	convertString:
+	lb $s4, 0($a0)
