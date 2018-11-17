@@ -5,11 +5,16 @@
     userInput:		.space 50
 .text
     main:
-	li $v0, 8       #get user input as txt 
-	la $a0, userInput
-	li $a1, 50
+li $v0, 8       #get user input as txt 
+la $a0, userInput
 li $a1, 50
-	syscall
+li $a1, 50
+syscall
 	
-	removeLeading:  #Remove leading spaces
-	li $t8, 32      #Save space char to t8
+removeLeading:  #Remove leading spaces
+li $t8, 32      #Save space char to t8
+beq $t8, $t9, removeFirst
+move $t9, $a0
+j checkLength
+
+removeFirst:
