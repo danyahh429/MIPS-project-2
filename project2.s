@@ -38,3 +38,8 @@
 	beqz $t0, nullError   #Branch to null error if length is 0 or null
 	slti $t3, $t0, 5      #Check that count is less than 5
 	beqz $t3, lengthError #Branch to length error if length is 5 or more
+	move $a0, $t4
+	j checkString
+
+	nullError:
+	li $v0, 4
