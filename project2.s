@@ -52,3 +52,9 @@
 	la $a0, lengthErrorMessage
 	syscall
 	j exit
+
+	checkString:
+	lb $t5, 0($a0)
+	beqz $t5, conversionInitializations  #End loop if null char is reached
+	beq $t5, $t1, conversionInitializations  #End loop if end-of-line char is detected
+	slti $t6, $t5, 48    #Check if the char is less than 0  or there is (Invalid input)
