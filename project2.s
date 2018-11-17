@@ -78,3 +78,8 @@
 	baseError:
 	li $v0, 4
 	la $a0, baseErrorMessage
+	syscall
+	j exit
+
+	conversionInitializations:
+	move $a0, $t4
