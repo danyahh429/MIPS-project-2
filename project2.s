@@ -118,3 +118,8 @@
 	beq $s0, $s5, zeroPower
 
 	threePower:
+	li $s6, 39304
+	mult $s4, $s6
+	mflo $s7
+	add $t7, $t7, $s7
+	addi $s0, $s0, -1
