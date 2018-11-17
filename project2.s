@@ -108,3 +108,8 @@
 	AToX:
 	addi $s4, $s4, -55
 	j nextStep
+	aTox:
+	addi $s4, $s4, -87
+
+	nextStep:
+	beq $s0, $s3, threePower
