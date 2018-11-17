@@ -73,3 +73,8 @@
 
 	Increment:
 	addi $a0, $a0, 1
+	j checkString
+
+	baseError:
+	li $v0, 4
+	la $a0, baseErrorMessage
